@@ -65,11 +65,14 @@ imagesData.forEach((item,index) => {
         $('.kepek').append(`<div class="thumbnail" data-number="${index}">
                     <img src="${item.photo}" data-number="${index}" alt="${item.title}"> 
                     </div>`)  
-        $(".thumbnail").click((event) => {
-           currentPhoto=parseInt($(event.target).attr("data-number"));
-           loadPhoto(currentPhoto);
-        });            
-  });
+});
+
+
+$(".thumbnail").click((event) => {
+    currentPhoto=parseInt($(event.target).attr("data-number"));
+    loadPhoto(currentPhoto);
+ });            
+
 
 imagesData.forEach((item,index) => {
     $('.szoveg').append(`<div class="title" data-number="${index}">${item.title}</div>`);
